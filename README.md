@@ -1,4 +1,4 @@
-###Cloudera Impala JDBC Example
+### Cloudera Impala JDBC Example
 
 This example shows how to build and run a maven-based project that executes SQL queries on Cloudera Impala using JDBC. 
 Cloudera Impala is a native Massive Parallel Processing (MPP) query engine which enables users to perform interactive analysis of data stored in HBase or HDFS. 
@@ -20,13 +20,13 @@ To use the Cloudera Impala JDBC driver in your own maven-based project you can c
 
 
 
-####Dependencies
+#### Dependencies
 To build the project you must have Maven 2.x or higher installed.  Maven info is [here](http://maven.apache.org).
 
 To run the project you must have access to a Hadoop cluster running Cloudera Impala with at least one populated table defined in the Hive Metastore.
 
 
-####Configure the example
+#### Configure the example
 To configure the example you must:
 
 - Select or create the table(s) to query against.
@@ -44,7 +44,7 @@ For this example I will use one of the Hue Beeswax sample tables.  I can see the
 
 ![Hue Table List](images/HueTableList.jpg)
 
-#####Set the query and impalad host
+##### Set the query and impalad host
 Edit these two setting in the ClouderaImpalaJdbcExample source file:
 
 - Set the SQL Statement
@@ -56,21 +56,21 @@ Edit these two setting in the ClouderaImpalaJdbcExample source file:
 `private static final String IMPALAD_HOST = "MyImpaladHost";`
 
 
-####Building the project
+#### B uilding the project
 To build the project, run the command:
 
 `mvn clean compile`
 
 from the root of the project directory.   There is a build.sh script for your convenience.
 
-####Running the example
+#### Running the example
 To run the example, use the command:
 
 `mvn exec:java -Dexec.mainClass=com.cloudera.example.ClouderaImpalaJdbcExample` 
 
 from the root of the project directory.  There is a run.sh script for your convenience.
 
-####Sample output
+#### Sample output
 Here is sample output from running the example:
 
     $ ./run.sh
